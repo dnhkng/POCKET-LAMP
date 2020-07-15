@@ -1,6 +1,9 @@
 #include "Adafruit_TCS34725.h"
  
 #define UV_pin 16
+#define red_LED 14
+#define green_LED 2  
+#define blue_LED 3
   
 Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_16X);
  
@@ -15,8 +18,11 @@ void setup() {
     while (1); // halt!
   }
   
-  // use this pins to drive the UV LED
+  // initialize digital pins as outputs.
   pinMode(UV_pin, OUTPUT);
+  pinMode(red_LED, OUTPUT);
+  pinMode(green_LED, OUTPUT);
+  pinMode(blue_LED, OUTPUT);
  
 }
  
